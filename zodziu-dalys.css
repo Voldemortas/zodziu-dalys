@@ -1,0 +1,130 @@
+:root {
+  --zd-default-color: red;
+  --zd-default-size: 1px;
+}
+
+.zd_prefix {
+  border-top: var(--zd-prefix-size, var(--zd-default-size)) solid
+    var(--zd-prefix-color, var(--zd-default-color));
+  position: relative;
+}
+
+.zd_prefix::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  width: var(--zd-prefix-size, var(--zd-default-size));
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  background-color: var(--zd-prefix-color, var(--zd-default-color));
+  -webkit-transform: scaleY(0.5) translateY(-50%);
+  transform: scaleY(0.5) translateY(-50%);
+}
+
+.zd_stem {
+  border-bottom: var(--zd-stem-size, var(--zd-default-size)) solid
+    var(--zd-stem-color, var(--zd-default-color));
+  position: relative;
+}
+
+.zd_stem::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  width: var(--zd-stem-size, var(--zd-default-size));
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  background-color: var(--zd-stem-color, var(--zd-default-color));
+  -webkit-transform: scaleY(0.5) translateY(50%);
+  transform: scaleY(0.5) translateY(50%);
+}
+
+.zd_compound {
+  border-bottom: var(--zd-compound-size, var(--zd-default-size)) solid
+    var(--zd-compound-color, var(--zd-default-color));
+  position: relative;
+}
+
+.zd_compound::after {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  width: var(--zd-compound-size, var(--zd-default-size));
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  background-color: var(--zd-compound-color, var(--zd-default-color));
+  -webkit-transform: scaleY(0.5) translateY(50%);
+  transform: scaleY(0.5) translateY(50%);
+}
+
+.zd_compound::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  width: var(--zd-compound-size, var(--zd-default-size));
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  background-color: var(--zd-compound-color, var(--zd-default-color));
+  -webkit-transform: scaleY(0.5) translateY(50%);
+  transform: scaleY(0.5) translateY(50%);
+}
+
+.zd_root {
+  border: solid var(--zd-root-color, var(--zd-default-color));
+  border-width: var(--zd-root-size, var(--zd-default-size)) 0 0 0;
+  border-radius: 50%;
+}
+
+.zd_infix {
+  border: solid var(--zd-infix-color, var(--zd-default-color));
+  border-width: var(--zd-infix-size, var(--zd-default-size));
+  border-radius: 50%;
+}
+
+.zd_reflexive {
+  border: solid var(--zd-flexive-color, var(--zd-default-color));
+  border-width: 0 0 var(--zd-flexive-size, var(--zd-default-size)) 0;
+  border-radius: 50%;
+}
+
+.zd_flection {
+  border-style: solid;
+  border-width: var(--zd-flection-size, var(--zd-default-size));
+  border-color: var(--zd-flection-color, var(--zd-default-color));
+}
+
+.zd_suffix {
+  position: relative;
+}
+
+.zd_suffix::before {
+  position: absolute;
+  display: inline-block;
+  top: var(--zd-suffix-height);
+  left: calc(-1 / 2 * var(--zd-suffix-height));
+  content: "";
+  height: 0;
+  width: var(--zd-suffix-slope);
+  border: solid var(--zd-suffix-color, var(--zd-default-color));
+  border-width: var(--zd-suffix-size, var(--zd-default-size)) 0 0 0;
+  transform: rotateZ(calc(-1 * var(--zd-suffix-angle)));
+}
+
+.zd_suffix::after {
+  position: absolute;
+  display: inline-block;
+  top: var(--zd-suffix-height);
+  left: calc(
+    var(--zd-suffix-width) + calc(-1 / 2 * var(--zd-suffix-height)) - 1%
+  );
+  content: "";
+  height: 0;
+  width: var(--zd-suffix-slope);
+  border: solid var(--zd-suffix-color, var(--zd-default-color));
+  border-width: var(--zd-suffix-size, var(--zd-default-size)) 0 0 0;
+  transform: rotateZ(var(--zd-suffix-angle));
+}

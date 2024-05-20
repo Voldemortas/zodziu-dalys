@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="lt">
+  <head>
+    <title>Žodžių dalių žymėtojas</title>
+    <link rel="stylesheet" href="zodziu-dalys.css" />
+    <style>
+      #first {
+        font-size: 50px;
+        font-family: Tahoma;
+      }
+      #second {
+        font-family: Arial;
+      }
+      #third {
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+      }
+      #fourth {
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        background-color: black;
+        padding: 20px;
+        color: wheat;
+      }
+      div {
+        margin-top: 20px;
+        font-size: 100px;
+      }
+    </style>
+    <script src="zodziu-dalys.js"></script>
+  </head>
+  <body>
+    <div class="no-space">
+      <div id="first">
+        <span class="zd_stem" style="--zd-stem-color: blue"
+          ><span class="zd_prefix">Pa</span><span class="zd_reflexive">si</span
+          ><span class="zd_root">mat</span
+          ><span class="zd_suffix">ymukėl</span></span
+        ><span class="zd_flection">is</span>
+      </div>
+      <div
+        id="second"
+        style="
+          --zd-default-color: green;
+          --zd-default-size: 5px;
+          --zd-suffix-color: red;
+          --zd-stem-color: blue;
+        "
+      >
+        <span class="zd_stem"
+          ><span class="zd_prefix">Pa</span><span class="zd_reflexive">si</span
+          ><span class="zd_root">mat</span><span class="zd_suffix">ym</span
+          ><span class="zd_suffix">uk</span
+          ><span class="zd_suffix">ėl</span></span
+        ><span class="zd_flection">is</span>
+      </div>
+      <div id="third" style="--zd-default-size: 2px">
+        <span class="zd_stem" style="--zd-stem-color: transparent">
+          <span class="zd_prefix">ne</span><span class="zd_prefix">be</span
+          ><span class="zd_prefix">pri</span><span class="zd_reflexive">si</span
+          ><span class="zd_root">kiški</span><span class="zd_compound">a</span
+          ><span class="zd_root">kopūst</span><span class="zd_suffix">ali</span
+          ><span class="zd_suffix">auj</span
+          ><span class="zd_suffix">ant</span></span
+        ><span class="zd_flection">iesiems</span>
+      </div>
+      <div
+        id="fourth"
+        style="
+          --zd-default-size: 2px;
+          --zd-prefix-color: orange;
+          --zd-root-color: yellow;
+          --zd-suffix-color: green;
+          --zd-flection-color: #00aaff;
+        "
+      >
+        <span class="zd_prefix">pa</span><span class="zd_root">sak</span
+        ><span class="zd_suffix">ėl</span><span class="zd_flection">ė</span>
+      </div>
+    </div>
+    <script>
+      zdDecorateSuffixes(0.43, document.getElementById("first"));
+      zdDecorateSuffixes(0.38, document.getElementById("second"));
+      zdDecorateSuffixes(0.59, document.getElementById("third"));
+      zdDecorateSuffixes(0.59, document.getElementById("fourth"));
+    </script>
+  </body>
+</html>
